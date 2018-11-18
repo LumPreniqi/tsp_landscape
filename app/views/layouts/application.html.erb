@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TspLandscape</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "highcharts", "chartkick" %>
+    <link href='https://fonts.googleapis.com/css?family=Raleway|Montserrat:400,700|Roboto:400,300,300italic,400italic,500' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cousine|Cutive+Mono|Fira+Mono|PT+Mono|Source+Code+Pro|VT323|Voces" rel="stylesheet">
+
+    <!--<link rel="stylesheet" type="text/css" href="css/montserrat/montserrat.css">-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!--  <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+      <link rel="stylesheet" type="text/css" href="css/structure.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/style-searchpage.css">
+      <link rel="stylesheet" type="text/css" href="css/theme-light.css">-->
+
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
+
+    <script type="application/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="application/javascript" src="//cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js"></script>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

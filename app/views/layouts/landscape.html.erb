@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <%= line_chart [{ name: 'Zgjidhjet',  data: @solutions_by_cities }] %>
+      </div>
+
+      <div>
+        <form action="<%= landscape_path %>">
+
+          <label>Numri i qyteteve:</label>
+          <input name="dimension" value="<%= @dimension %>" type="text">
+
+          <button type="submit">Ndrysho</button>
+
+          <label>Numri i zgjidhjeve:</label>
+          <input readonly value="<%= (1..@dimension).inject(:*) || 1 %>" type="text">
+
+        </form>
+      </div>
+    </div>
+    <br>
+    <div>
+      <p>Distancat mes qyteteve:</p>
+      <table style="width:25%">
+
+        <% @distances.each do |row| %>
+          <tr> <% row.each do |val| %> <td> <%= val %> </td> <% end %> </tr>
+        <% end %>
+
+      </table>
+    </div>
+  </body>
+</html>
